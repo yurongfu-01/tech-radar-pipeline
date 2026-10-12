@@ -1,7 +1,17 @@
 # TechRadar-to-Knowledge: 行业权威技术讲座与工程博客自动化研读中枢
 
 > **开源自动化工作流**：专为 Agent 批量研读打造的端到端技术雷达系统。  
-> 融合全球顶级技术峰会 (USENIX, QCon)、硬核 AI 播客 (Dwarkesh, Latent Space) 与知名科技大厂工程博客 (OpenAI, Netflix, Uber, Cloudflare)，自动执行**发现、增量去重、字幕秒级抓取、Agent 深度提炼与 Obsidian PKM 看板归档**。
+> 融合全球顶级技术峰会 (USENIX, QCon)、硬核 AI 播客 (Dwarkesh, Latent Space) 与知名科技大厂工程博客 (OpenAI, Netflix, Uber, Cloudflare)，自动执行**发现、增量去重、字幕秒级抓取、Agent 深度提炼与 Obsidian PKM 看板归档**。  
+> 
+> 🚨 **工作区纪律**：本项目工作区中 Agent 只负责按工作流执行任务，所有研读产物自动强一致同步至桌面 Agent 经验库：[`C:\Users\jiang\Desktop\开发经验\开发者经验分析-Agent`](file:///C:/Users/jiang/Desktop/开发经验/开发者经验分析-Agent)。
+
+---
+
+## 📋 工作区核心规范与协议
+
+- **Agent 工作流执行协议**：[AGENTS.md](./AGENTS.md)
+- **开发者经验分析与执行规范**：[开发者经验分析与Agent自动化执行规范.md](./开发者经验分析与Agent自动化执行规范.md)
+- **桌面强一致同步引擎**：[sync_to_desktop.py](./sync_to_desktop.py) / [sync_to_desktop.ps1](./sync_to_desktop.ps1)
 
 ---
 

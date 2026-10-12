@@ -6,6 +6,7 @@
 """
 
 import os
+import sys
 import re
 import json
 import shutil
@@ -112,29 +113,32 @@ class VideoCollector(BaseCollector):
         return item
 
     def _fetch_subtitles_via_ytdlp(self, url: str) -> Optional[str]:
-        """调用 yt-dlp 快速拉取字幕文本，不下载视频音频主体"""
+        """调用 yt-dlp 快速拉取原生或自动字幕文本，不下载视频音频主体"""
         try:
-            # 临时获取字幕
-            cmd = [
-                "yt-dlp",
-                "--skip-download",
-                "--write-auto-sub",
-                "--write-sub",
-                "--sub-lang", "en,zh-Hans,zh",
-                "--sub-format", "vtt",
-                "--output", "temp_sub_%(id)s",
-                url
-            ]
-            res = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
-            # 查找生成的 temp_sub_*.vtt
-            for fname in os.listdir("."):
-                if fname.startswith("temp_sub_") and fname.endswith(".vtt"):
-                    with open(fname, "r", encoding="utf-8", errors="ignore") as f:
-                        content = f.read()
-                    os.remove(fname)
-                    return content
+            import tempfile
+            with tempfile.TemporaryDirectory() as tmp_dir:
+                output_template = os.path.join(tmp_dir, "sub_%(id)s")
+                cmd = [
+                    sys.executable, "-m", "yt_dlp",
+                    "--skip-download",
+                    "--write-auto-sub",
+                    "--write-sub",
+                    "--sub-lang", "en,zh-Hans,zh,en-US",
+                    "--sub-format", "vtt",
+                    "--output", output_template,
+                    url
+                ]
+                res = subprocess.run(cmd, capture_output=True, text=True, timeout=40)
+                # 遍历 tmp_dir 找到生成的 .vtt
+                for fname in os.listdir(tmp_dir):
+                    if fname.endswith(".vtt"):
+                        vtt_file = os.path.join(tmp_dir, fname)
+                        with open(vtt_file, "r", encoding="utf-8", errors="ignore") as f:
+                            content = f.read()
+                        if content and len(content.strip()) > 100:
+                            return content
         except Exception as e:
-            print(f"[INFO] yt-dlp 提取字幕未执行或失败: {e}")
+            print(f"[INFO] yt-dlp 提取字幕异常: {e}")
         return None
 
     @staticmethod

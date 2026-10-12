@@ -118,6 +118,10 @@ class TechRadarPipeline:
                     print(f"   🧠 [Agent 研读中] 提炼核心架构与避坑清单...")
                     markdown_doc = self.synthesizer.synthesize(item)
 
+                    # 质量门禁 (Quality Gate): 严禁不足篇幅或空洞产物入库
+                    if len(markdown_doc.strip()) < 1500:
+                        raise ValueError(f"质量门禁拦截：产物篇幅过短 ({len(markdown_doc.strip())} 字符)，拒绝入库")
+
                     # 5. 沉淀至 PKM 知识库
                     output_file = self.exporter.export(item, markdown_doc)
                     self.db.update_item_synthesized(item_hash, output_file)
