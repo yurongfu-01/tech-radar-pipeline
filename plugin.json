@@ -1,0 +1,12 @@
+{
+  "name": "tech-radar-pipeline",
+  "displayName": "TechRadar (行业权威技术讲座与博客自动化研读工作流)",
+  "version": "1.0.0",
+  "description": "通用技术雷达与研读流水线（Harness通用版·适配Antigravity/ClaudeCode/Codex/Hermes）。一键监控全球顶会(USENIX, QCon, StrangeLoop)、硬核播客(Latent Space, Dwarkesh, 硅谷101)与500+顶级大厂工程博客(OpenAI, Netflix, Stripe)，秒级提取字幕，增量排重，自动输出六段式深度研读案与Obsidian看板。",
+  "suggestedPrompts": [
+    "帮我运行技术雷达，扫描最近有什么前沿的大会讲座与大厂博客：python cli.py run",
+    "查看当前雷达监控了哪些权威来源与会议频道：python cli.py list-sources",
+    "把技术雷达的权威订阅源导出为标准 OPML 文件：python cli.py export-opml",
+    "添加一个新的高质量播客到雷达中：python cli.py add-source ..."
+  ]
+}

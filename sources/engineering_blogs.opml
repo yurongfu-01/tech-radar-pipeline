@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>Curated Global Tech Engineering Blogs &amp; Talks</title>
+    <dateCreated>Mon, 12 Oct 2026 20:00:00 GMT</dateCreated>
+    <docs>http://opml.org/spec2.opml</docs>
+  </head>
+  <body>
+    <outline text="AI Research &amp; Foundation Models" title="AI Research">
+      <outline type="rss" text="OpenAI News" title="OpenAI News" xmlUrl="https://openai.com/news/rss.xml" htmlUrl="https://openai.com/news" />
+      <outline type="rss" text="Anthropic News" title="Anthropic News" xmlUrl="https://www.anthropic.com/feed.xml" htmlUrl="https://www.anthropic.com/news" />
+      <outline type="rss" text="Google AI Blog" title="Google AI Blog" xmlUrl="https://blog.google/technology/ai/rss/" htmlUrl="https://blog.google/technology/ai/" />
+      <outline type="rss" text="Hugging Face Blog" title="Hugging Face Blog" xmlUrl="https://huggingface.co/blog/feed.xml" htmlUrl="https://huggingface.co/blog" />
+      <outline type="rss" text="Mistral AI News" title="Mistral AI News" xmlUrl="https://mistral.ai/news/index.xml" htmlUrl="https://mistral.ai/news/" />
+    </outline>
+
+    <outline text="Top Tier Engineering Blogs" title="Engineering Blogs">
+      <outline type="rss" text="Netflix TechBlog" title="Netflix TechBlog" xmlUrl="https://netflixtechblog.com/feed" htmlUrl="https://netflixtechblog.com" />
+      <outline type="rss" text="Uber Engineering" title="Uber Engineering" xmlUrl="https://www.uber.com/blog/engineering/rss" htmlUrl="https://www.uber.com/blog/engineering" />
+      <outline type="rss" text="Stripe Engineering" title="Stripe Engineering" xmlUrl="https://stripe.com/blog/feed.rss" htmlUrl="https://stripe.com/blog/engineering" />
+      <outline type="rss" text="Cloudflare Blog" title="Cloudflare Blog" xmlUrl="https://blog.cloudflare.com/rss/" htmlUrl="https://blog.cloudflare.com" />
+      <outline type="rss" text="Meta Engineering" title="Meta Engineering" xmlUrl="https://engineering.fb.com/feed/" htmlUrl="https://engineering.fb.com" />
+      <outline type="rss" text="GitHub Engineering" title="GitHub Engineering" xmlUrl="https://github.blog/engineering/feed/" htmlUrl="https://github.blog/category/engineering/" />
+      <outline type="rss" text="Discord Engineering" title="Discord Engineering" xmlUrl="https://discord.com/blog/rss.xml" htmlUrl="https://discord.com/blog" />
+      <outline type="rss" text="Airbnb Engineering" title="Airbnb Engineering" xmlUrl="https://medium.com/feed/airbnb-engineering" htmlUrl="https://medium.com/airbnb-engineering" />
+    </outline>
+
+    <outline text="Hardcore Podcasts &amp; Interviews" title="Hardcore Podcasts">
+      <outline type="rss" text="Dwarkesh Patel" title="Dwarkesh Patel" xmlUrl="https://anchor.fm/s/52e9f824/podcast/rss" htmlUrl="https://www.dwarkeshpatel.com" />
+      <outline type="rss" text="Latent Space Podcast" title="Latent Space Podcast" xmlUrl="https://api.substack.com/feed/podcast/1084089.rss" htmlUrl="https://www.latent.space" />
+      <outline type="rss" text="Lex Fridman Podcast" title="Lex Fridman Podcast" xmlUrl="https://lexfridman.com/feed/podcast/" htmlUrl="https://lexfridman.com" />
+      <outline type="rss" text="Acquired" title="Acquired" xmlUrl="https://feeds.transistor.fm/acquired" htmlUrl="https://www.acquired.fm" />
+      <outline type="rss" text="Silicon Valley 101" title="Silicon Valley 101" xmlUrl="https://feeds.fireside.fm/sv101/rss" htmlUrl="https://sv101.fireside.fm" />
+    </outline>
+
+    <outline text="Global Tech Conferences (YouTube Feeds)" title="Conferences">
+      <outline type="rss" text="InfoQ Talks" title="InfoQ Talks" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC640y4UvDAlya_WOj5U4iCg" htmlUrl="https://www.youtube.com/@InfoQ" />
+      <outline type="rss" text="USENIX Association" title="USENIX Association" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC4-m_qT_mJqR5GfU5-o05rg" htmlUrl="https://www.youtube.com/@USENIXAssociation" />
+      <outline type="rss" text="The Strange Loop" title="The Strange Loop" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC_QIfHvN9auy2CoOdSfMWDw" htmlUrl="https://www.youtube.com/@TheStrangeLoop" />
+      <outline type="rss" text="Y Combinator" title="Y Combinator" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCxIJaCMEptJNTiqFIAnLWYQ" htmlUrl="https://www.youtube.com/@ycombinator" />
+      <outline type="rss" text="GOTO Conferences" title="GOTO Conferences" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCs_tLP3AiwYKwdUHpltJPuA" htmlUrl="https://www.youtube.com/@GOTO-" />
+    </outline>
+  </body>
+</opml>

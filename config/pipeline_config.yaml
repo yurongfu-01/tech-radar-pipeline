@@ -1,0 +1,38 @@
+# ==============================================================================
+# TechRadar 流水线全局运行配置 (Pipeline Runtime Settings)
+# ==============================================================================
+
+pipeline:
+  # 单次每个源抓取的最大新条目数（冷启动防刷限制）
+  max_items_per_source: 3
+
+  # 请求超时时间 (秒)
+  request_timeout_seconds: 12
+
+  # User-Agent 设置（防简单反爬拦截）
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 TechRadar/1.0"
+
+  # 输出目录设置
+  paths:
+    db_path: "data/state_store.db"
+    raw_cache_dir: "output/raw"
+    pkm_vault_dir: "output/vault"
+    digest_dir: "output/digests"
+
+  # 知识提炼模式设置
+  # mode 选项:
+  # - "mode_b_deep": 六段式深度学习研读案 (痛点解构 + Mermaid架构拓扑 + 盲区 + 准出清单)
+  # - "mode_a_verbatim": 高保真原貌切片复刻档 (带时间戳切片 + 逐字稿附录)
+  # - "auto": 默认视频/音频采用 mode_b，博客采用深度研读
+  synthesis:
+    default_mode: "mode_b_deep"
+    language: "zh-CN"
+    # 当有外部 LLM API 时使用，支持: "gemini", "openai", "claude", "ollama", "fallback_local"
+    llm_provider: "fallback_local"
+    # 模型名 (如 gpt-4o-mini, gemini-1.5-flash, deepseek-chat, qwen2.5:7b)
+    llm_model: "gemini-1.5-flash"
+
+  # 过滤与门禁机制
+  filters:
+    min_word_count: 200            # 正文或文稿少于此字数直接跳过（过滤简短通知）
+    skip_older_than_days: 30       # 跳过发布时间早于 30 天的陈旧内容

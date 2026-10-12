@@ -1,0 +1,192 @@
+# ==============================================================================
+# TechRadar 权威行业内容源配置表 (Curated Authority Sources)
+# 涵盖：顶级技术大会(Keynotes)、硬核架构播客(Podcasts)、知名科技公司工程博客(Blogs)
+# ==============================================================================
+
+version: "1.0"
+
+sources:
+  # ----------------------------------------------------------------------------
+  # 1. 顶级技术大会与权威讲座 (Conferences & Keynotes)
+  # ----------------------------------------------------------------------------
+  - id: "conf-qcon"
+    name: "QCon & InfoQ Global Talks"
+    category: "conference"
+    type: "youtube_channel"
+    url: "https://www.youtube.com/@InfoQ"
+    feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC640y4UvDAlya_WOj5U4iCg"
+    description: "企业级高可用架构、微服务、分布式系统与团队工程效能"
+    tags: ["架构设计", "分布式", "微服务", "工程管理"]
+    authority_score: 9.8
+    enabled: true
+
+  - id: "conf-usenix"
+    name: "USENIX Technical Conferences"
+    category: "conference"
+    type: "youtube_channel"
+    url: "https://www.youtube.com/@USENIXAssociation"
+    feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC4-m_qT_mJqR5GfU5-o05rg"
+    description: "操作系统(OSDI)、存储(FAST)、网络(NSDI)、安全(USENIX Security)世界顶级系统学术会议"
+    tags: ["系统底层", "内核", "存储系统", "计算机安全"]
+    authority_score: 10.0
+    enabled: true
+
+  - id: "conf-strange-loop"
+    name: "Strange Loop Archive"
+    category: "conference"
+    type: "youtube_channel"
+    url: "https://www.youtube.com/@TheStrangeLoop"
+    feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC_QIfHvN9auy2CoOdSfMWDw"
+    description: "编程语言理论、函数式编程、前沿分布式算法、新兴计算机科学交叉领域"
+    tags: ["函数式编程", "算法理论", "前沿技术"]
+    authority_score: 9.7
+    enabled: true
+
+  - id: "conf-yc-startup-school"
+    name: "Y Combinator Startup & Engineering"
+    category: "conference"
+    type: "youtube_channel"
+    url: "https://www.youtube.com/@ycombinator"
+    feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCxIJaCMEptJNTiqFIAnLWYQ"
+    description: "技术创业、产品打造、从 0 到 1 架构设计与增长"
+    tags: ["技术创业", "产品设计", "架构演进"]
+    authority_score: 9.6
+    enabled: true
+
+  - id: "conf-goto"
+    name: "GOTO Conferences"
+    category: "conference"
+    type: "youtube_channel"
+    url: "https://www.youtube.com/@GOTO-"
+    feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs_tLP3AiwYKwdUHpltJPuA"
+    description: "面向开发者的顶级实战会议，覆盖云原生、DevOps、架构演进"
+    tags: ["云原生", "架构实践", "DevOps"]
+    authority_score: 9.5
+    enabled: true
+
+  # ----------------------------------------------------------------------------
+  # 2. 顶级硬核科技播客与创始人访谈 (Podcasts & In-Depth Interviews)
+  # ----------------------------------------------------------------------------
+  - id: "pod-dwarkesh"
+    name: "Dwarkesh Patel Podcast"
+    category: "podcast"
+    type: "rss"
+    url: "https://www.dwarkeshpatel.com"
+    feed_url: "https://anchor.fm/s/52e9f824/podcast/rss"
+    description: "全球顶尖 AI 科学家、基础模型架构师与战略思想家深度长访谈"
+    tags: ["大模型", "前沿AI", "长篇访谈", "战略思想"]
+    authority_score: 9.9
+    enabled: true
+
+  - id: "pod-latent-space"
+    name: "Latent Space (The AI Engineer Podcast)"
+    category: "podcast"
+    type: "rss"
+    url: "https://www.latent.space"
+    feed_url: "https://api.substack.com/feed/podcast/1084089.rss"
+    description: "AI 工程师第一线访谈：聚焦 Agent、模型蒸馏、RAG 架构与基础设施"
+    tags: ["AI-Engineering", "LLM应用", "Agent系统"]
+    authority_score: 9.8
+    enabled: true
+
+  - id: "pod-lex-fridman"
+    name: "Lex Fridman Podcast"
+    category: "podcast"
+    type: "rss"
+    url: "https://lexfridman.com/podcast"
+    feed_url: "https://lexfridman.com/feed/podcast/"
+    description: "计算机科学、深度学习、物理学、机器人与通用人工智能深度对话"
+    tags: ["人工智能", "计算机科学", "大师对谈"]
+    authority_score: 9.7
+    enabled: true
+
+  - id: "pod-acquired"
+    name: "Acquired"
+    category: "podcast"
+    type: "rss"
+    url: "https://www.acquired.fm"
+    feed_url: "https://feeds.transistor.fm/acquired"
+    description: "全球科技巨头（NVIDIA, Apple, Microsoft, TSMC）技术战略与商业演进全复盘"
+    tags: ["商业战略", "科技巨头", "深度研读"]
+    authority_score: 9.8
+    enabled: true
+
+  - id: "pod-sv101"
+    name: "硅谷101 (Silicon Valley 101)"
+    category: "podcast"
+    type: "rss"
+    url: "https://sv101.fireside.fm"
+    feed_url: "https://feeds.fireside.fm/sv101/rss"
+    description: "中文优质深度科技访谈，聚焦硅谷一线 AI 发展与硬科技创业"
+    tags: ["硅谷动态", "AI产业", "中文访谈"]
+    authority_score: 9.5
+    enabled: true
+
+  # ----------------------------------------------------------------------------
+  # 3. 全球顶尖科技公司工程博客 (Engineering Blogs)
+  # ----------------------------------------------------------------------------
+  - id: "blog-openai"
+    name: "OpenAI Research & Engineering"
+    category: "blog"
+    type: "rss"
+    url: "https://openai.com/news"
+    feed_url: "https://openai.com/news/rss.xml"
+    description: "前沿大模型论文、对齐研究与生产环境工程实践"
+    tags: ["AI研究", "模型训练", "系统基础设施"]
+    authority_score: 10.0
+    enabled: true
+
+  - id: "blog-anthropic"
+    name: "Anthropic Engineering & Research"
+    category: "blog"
+    type: "rss"
+    url: "https://www.anthropic.com/news"
+    feed_url: "https://www.anthropic.com/feed.xml"
+    description: "Claude 模型架构、可解释性研究与 AI 安全系统工程"
+    tags: ["AI安全", "模型可解释性", "前沿研究"]
+    authority_score: 9.9
+    enabled: true
+
+  - id: "blog-netflix"
+    name: "Netflix TechBlog"
+    category: "blog"
+    type: "rss"
+    url: "https://netflixtechblog.com"
+    feed_url: "https://netflixtechblog.com/feed"
+    description: "超大规模微服务高可用、推荐算法、混沌工程与数据平台"
+    tags: ["微服务", "高可用", "大数据平台", "混沌工程"]
+    authority_score: 9.8
+    enabled: true
+
+  - id: "blog-uber"
+    name: "Uber Engineering Blog"
+    category: "blog"
+    type: "rss"
+    url: "https://www.uber.com/blog/engineering"
+    feed_url: "https://www.uber.com/blog/engineering/rss"
+    description: "地理空间计算、实时数据处理、大规模机器学习管道"
+    tags: ["实时计算", "系统架构", "机器学习平台"]
+    authority_score: 9.6
+    enabled: true
+
+  - id: "blog-cloudflare"
+    name: "Cloudflare Blog (Architecture & Security)"
+    category: "blog"
+    type: "rss"
+    url: "https://blog.cloudflare.com"
+    feed_url: "https://blog.cloudflare.com/rss/"
+    description: "全球边缘计算、网络协议栈(HTTP/3, QUIC)、DDoS 防护与系统底层优化"
+    tags: ["网络协议", "边缘计算", "底层网络", "安全防御"]
+    authority_score: 9.9
+    enabled: true
+
+  - id: "blog-stripe"
+    name: "Stripe Engineering"
+    category: "blog"
+    type: "rss"
+    url: "https://stripe.com/blog/engineering"
+    feed_url: "https://stripe.com/blog/feed.rss"
+    description: "金融级高可用事务系统、API 架构设计、代码重构与类型系统"
+    tags: ["金融架构", "API设计", "高可靠系统"]
+    authority_score: 9.7
+    enabled: true

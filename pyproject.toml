@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tech-radar-pipeline"
+version = "1.0.0"
+description = "Automated knowledge radar & deep synthesis pipeline for tech conferences, podcasts, and engineering blogs."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+  { name = "jiang", email = "3915466252@qq.com" }
+]
+dependencies = [
+  "pyyaml>=6.0"
+]
+
+[project.optional-dependencies]
+audio = [
+  "yt-dlp>=2024.08.01",
+  "faster-whisper>=1.0.0"
+]
+
+[project.scripts]
+tech-radar = "cli:main"
